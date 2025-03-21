@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #messages {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 200px;
+            overflow-y: scroll;
+            margin-bottom: 10px;
+        }
+        #input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #send {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebSocket Test Client</h1>
+    <div id="messages"></div>
+    <input type="text" id="input" placeholder="Type your message here..." />
+    <button id="send">Send</button>
+
+    <script>
+        // Tạo kết nối WebSocket tới server
+        const ws = new WebSocket('ws://localhost:3000');
+
+        // Lấy các phần tử HTML
+        const messagesDiv = document.getElementById('messages');
+        const inputField = document.getElementById('input');
+        const sendButton = document.getElementById('send');
+
+        // Hàm thêm tin nhắn vào giao diện
+        function addMessage(message) {
+            const p = document.createElement('p');
+            p.textContent = message;
+            messagesDiv.appendChild(p);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;  // Tự động cuộn xuống cuối
+        }
+
+        // Khi kết nối WebSocket mở thành công
+        ws.onopen = function() {
+            addMessage('Connected to WebSocket server');
+        };
+
+        // Khi nhận được tin nhắn từ server
+        ws.onmessage = function(event) {
+            addMessage('Server: ' + event.data);
+        };
+
+        // Khi kết nối WebSocket đóng
+        ws.onclose = function() {
+            addMessage('Disconnected from WebSocket server');
+        };
+
+        // Khi có lỗi trong kết nối WebSocket
+        ws.onerror = function(error) {
+            addMessage('WebSocket error: ' + error);
+        };
+
+        // Khi nhấn nút "Send"
+        sendButton.onclick = function() {
+            const message = inputField.value;
+            if (message) {
+                ws.send(message);  // Gửi tin nhắn tới server
+                addMessage('You: ' + message);
+                inputField.value = '';  // Xóa nội dung trong ô nhập
+            }
+        };
+    </script>
+</body>
+</html>

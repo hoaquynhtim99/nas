@@ -16,7 +16,17 @@ BlaNAS là hệ thống quản lý chia sẻ, xem trước, đồng bộ tệp t
 - **FileZone:** Công khai tệp tin lên internet
 
 ## Hướng dẫn cài đặt
-*Cập nhật sau*
+
+Xem các yêu cầu về môi trường cho NukeViet mục **Requirements** [ở đây](https://github.com/nukeviet/nukeviet/tree/nukeviet5.0?tab=readme-ov-file#for-users)   
+Ngoài ra BlaNAS yêu cầu cần có:
+- MariaDB 10.0.5+ hoặc MySQL 8.0+
+- Máy chủ cài ffmpeg, libavcodec-extra, nginx
+
+### Nếu bạn muốn sử dụng
+- Cài đặt 
+
+### Nếu bạn muốn phát triển
+- Xem các hướng dẫn bên trên dành cho người dùng.
 
 ## Giấy phép
 Dự án được phát hành theo giấy phép **GPL-2.0+**.

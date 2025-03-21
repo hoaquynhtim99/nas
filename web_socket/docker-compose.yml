@@ -1,0 +1,15 @@
+services:
+  blanas_signaling:
+    container_name: go
+    hostname: go
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "3001:3001"
+    environment:
+      - CGO_ENABLED=1
+    stdin_open: true
+    tty: true
