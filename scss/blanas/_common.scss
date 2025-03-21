@@ -1,0 +1,106 @@
+#admintoolbar {
+    display: none!important;
+}
+
+// Width in px
+@for $i from 1 through 20 {
+    .fw-#{$i * 25} {
+        width: #{$i * 25}px!important;
+    }
+}
+
+// Block ellipsis: Chú ý class này chỉ dùng khi không thiết lập font-size, line-height mà dùng mặc định của body
+@for $i from 2 through 4 {
+    .text-truncate-#{$i} {
+        max-height: calc($font-size-base * $line-height-base * $i);
+        -webkit-line-clamp: #{$i};
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+
+    .text-fixed-truncate-#{$i} {
+        height: calc($font-size-base * $line-height-base * $i);
+        -webkit-line-clamp: #{$i};
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.search-box {
+    position: relative;
+
+    .form-control {
+        padding-left: 2.5rem;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: .875rem;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: var(--bs-secondary-color);
+    }
+}
+
+.progress-sm {
+    height: 0.3125rem;
+}
+
+.progress,
+.progress-stacked {
+    --bs-progress-bg: var(--bs-tertiary-bg);
+}
+
+.bx-fs-btn {
+    font-size: 19.5px;
+}
+
+.fs-sm {
+    font-size: 13px;
+}
+
+.text-excel {
+    color: #217346;
+}
+
+.text-word {
+    color: #2B579A ;
+}
+
+.text-powerpoint {
+    color: #D24726 ;
+}
+
+.text-csv {
+    color: #008000 ;
+}
+
+.text-zip {
+    color: #808080 ;
+}
+
+.text-image {
+    color: #00B7EB ;
+}
+
+.text-video {
+    color: #800080 ;
+}
+
+.text-text {
+    color: #808080 ;
+}
+
+.text-code {
+    color: #0000FF ;
+}
+
+.text-audio {
+    color: #800080 ;
+}

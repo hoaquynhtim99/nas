@@ -1,0 +1,46 @@
+.nas-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-shadow: var(--bs-box-shadow-sm);
+    padding: 0 $header-padding-x;
+    background-color: $header-bg;
+    color: var(--bs-gray-100);
+    z-index: 50;
+
+    .nas-header-right {
+        min-height: $header-height;
+    }
+
+    .user {
+        .user-dropdown {
+            height: $header-height;
+
+            img {
+                width: $header-height-content;
+                height: $header-height-content;
+            }
+
+            .no-avata {
+                color: var(--bs-gray-300);
+            }
+        }
+    }
+
+    .header-item {
+        height: $header-height;
+
+        .btn-icon {
+            width: $header-height-content;
+            height: $header-height-content;
+            color: var(--bs-gray-100);
+            transition: $btn-transition;
+
+            &:hover {
+                background-color: var(--bs-gray-400);
+                color: var(--bs-gray-700);
+            }
+        }
+    }
+}

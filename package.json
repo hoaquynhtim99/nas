@@ -17,6 +17,12 @@
     "stylelint-config-standard": "^36.0.1"
   },
   "scripts": {
+    "blanas-css": "npm-run-all blanas-compile blanas-css-prefix blanas-css-rtl",
+    "blanas-css-prefix": "postcss --config build/postcss.config.mjs --replace \"src/themes/blanas/css/*.css\" \"!src/themes/blanas/css/*.rtl*.css\" \"!src/themes/blanas/css/*.min.css\"",
+    "blanas-css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.mjs --dir \"src/themes/blanas/css\" --ext \".rtl.css\" \"src/themes/blanas/css/*.css\" \"!src/themes/blanas/css/*.rtl*.css\" \"!src/themes/blanas/css/*.min.css\"",
+    "blanas-compile": "sass --style expanded --source-map --embed-sources scss/blanas/:src/themes/blanas/css/",
+    "watch-blanas-css": "nodemon --watch scss/ --ext scss --exec \"npm-run-all blanas-compile blanas-css-prefix blanas-css-rtl\"",
+    "watch-blanas": "npm-run-all --parallel watch-blanas-*",
     "admin-css": "npm-run-all admin-compile admin-css-prefix admin-css-rtl",
     "admin-css-prefix": "postcss --config build/postcss.config.mjs --replace \"src/themes/admin_future/css/*.css\" \"!src/themes/admin_future/css/*.rtl*.css\" \"!src/themes/admin_future/css/*.min.css\"",
     "admin-css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.mjs --dir \"src/themes/admin_future/css\" --ext \".rtl.css\" \"src/themes/admin_future/css/*.css\" \"!src/themes/admin_future/css/*.rtl*.css\" \"!src/themes/admin_future/css/*.min.css\"",

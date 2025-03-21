@@ -1,0 +1,124 @@
+$zindex-developer-error: 950;
+$zindex-picker: 1049;
+
+$link-decoration: none;
+$min-contrast-ratio: 2;
+
+$primary: #c0392b;
+$light: #f3f6f9;
+$green: #0ab39c;
+$teal: #02a8b5;
+$cyan: #299cdb;
+$yellow: #f7b84b;
+$orange: #f1963b;
+$red: #f06548;
+$pink: #f672a7;
+
+$font-family-sans-serif: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$font-size-base-bs: 1rem; // 16px
+$h1-font-size: $font-size-base-bs * 1.625; // 28px
+$h2-font-size: $font-size-base-bs * 1.5; // 24px
+$h3-font-size: $font-size-base-bs * 1.375; // 22px
+$h4-font-size: $font-size-base-bs * 1.25; // 20px
+$h5-font-size: $font-size-base-bs * 1.125; // 18px
+$h6-font-size: $font-size-base-bs; // 16px
+
+$font-size-base: 0.875rem;
+
+$gray-100: #f3f6f9;
+$gray-200: #eff2f7;
+$gray-300: #e9ebec;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #878a99;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$body-bg: $gray-100;
+$body-secondary-bg: #fff;
+
+$enable-shadows: true;
+
+// App colors
+$app-colors: (
+    rtc-transfer: #f36944,
+    drive-connect: #4285F4,
+    file-zone: $yellow,
+    file-manager: $orange,
+    music-player: #7851A9,
+    video-player: #FF1493
+);
+
+// Input
+$btn-box-shadow: 0;
+$btn-font-weight: 300;
+
+$input-btn-focus-box-shadow: 0;
+$input-btn-font-size: 13px;
+$input-box-shadow: 0;
+$input-placeholder-color: $gray-500;
+$input-disabled-bg: var(--bs-body-bg);
+$input-bg: var(--bs-secondary-bg);
+
+// Select
+$form-select-font-size: 13px;
+$form-select-font-weight: 300;
+$form-select-box-shadow: 0;
+
+// Header
+$header-bg: rgb(44 62 80 / 90%);
+$header-height: 3.75rem; // 60px
+$header-padding-x: 1.5rem;
+$header-padding-y: 0.625rem;
+$header-height-content: 2.5rem; // 40px
+
+// Menu left
+$menu-witdh: 15.625rem;
+$menu-witdh-collapse: 3.75rem;
+
+// Dropdown
+$dropdown-bg: var(--bs-secondary-bg);
+$dropdown-border-width: 0;
+
+// Process
+$progress-box-shadow: 0;
+
+// Modal
+$modal-content-bg: var(--bs-secondary-bg);
+
+// File manager
+$fmn_mobile_sidebar_width: 280px;
+
+// Toasts
+$toast-spacing: 1rem;
+
+// Pagination
+$pagination-bg: var(--bs-secondary-bg);
+$pagination-focus-box-shadow: 0;
+$pagination-margin-start: 3px;
+$pagination-padding-y-sm: 4px 8px;
+$pagination-padding-x-sm: 2px 8px;
+
+// Card
+$card-bg: var(--bs-secondary-bg);
+$card-border-width: 0;
+$card-box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
+$card-border-radius: 0.25rem;
+
+// Popovers
+$popover-border-color: transparent;
+$popover-border-radius: var(--bs-border-radius);
+$popover-bg: var(--bs-secondary-bg);
+$popover-header-bg: var(--bs-body-bg);
+$popover-header-padding-y: .5rem;
+$popover-header-padding-x: .5rem;
+$popover-body-padding-y: .5rem;
+$popover-body-padding-x: .5rem;
+
+// Progress bars
+$progress-border-radius: var(--bs-border-radius-sm);
+
+// List group
+$list-group-bg: var(--bs-secondary-bg);
