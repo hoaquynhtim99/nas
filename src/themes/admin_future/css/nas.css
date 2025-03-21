@@ -1,0 +1,25 @@
+/**
+ * NukeViet Content Management System
+ * @version 4.x
+ * @author VINADES.,JSC <contact@vinades.vn>
+ * @copyright (C) 2009-2021 VINADES.,JSC. All rights reserved
+ * @license GNU/GPL version 2 or any later version
+ * @see https://github.com/nukeviet The NukeViet CMS GitHub project
+ */
+.user-items .image {
+  width: 2.375rem;
+  height: 2.375rem;
+}
+.user-items .image i {
+  font-size: 2.375rem;
+}
+.user-items .image img {
+  -o-object-position: center;
+  object-position: center;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=nas.css.map */
