@@ -13,7 +13,7 @@ if (!defined('NV_IS_CONSOLE')) {
     die('Stop!!!');
 }
 
-$_SERVER['HTTP_HOST'] = 'blanas.com';
+$_SERVER['HTTP_HOST'] = 'blanas.local';
 $_SERVER['HTTPS'] = 'on';
 
 $_SERVER['SERVER_NAME'] = 'localhost';

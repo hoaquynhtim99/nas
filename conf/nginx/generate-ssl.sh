@@ -17,6 +17,6 @@ DIR_PATH=$PWD
 rm -f $DIR_PATH/server.key
 rm -f $DIR_PATH/server.crt
 
-openssl req -config $DIR_PATH/cert.conf -newkey rsa:2048 -nodes -keyout $DIR_PATH/server.key -x509 -days 3650 -out $DIR_PATH/server.crt
+openssl req -config $DIR_PATH/certconf -newkey rsa:2048 -nodes -keyout $DIR_PATH/server.key -x509 -days 3650 -out $DIR_PATH/server.crt
 
 echo "Done"

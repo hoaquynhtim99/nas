@@ -6,9 +6,9 @@ package libs
 var AppVersion = "v1"
 var AppScheme = "http"
 var AppPort = "8081"
-var AppDomain = "blanas.com"
+var AppDomain = "blanas.local"
 
-var ClientAllowed = []string{"https://blanas.com"}
+var ClientAllowed = []string{"https://blanas.local"}
 
 var SSLCertFile = "" // Full path nếu cái này có, không thì lấy trong thư mục ssl
 var SSLKeyFile = ""  // Full patn nếu cái này có, không thì lấy trong thư mục ssl

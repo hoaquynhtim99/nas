@@ -22,10 +22,10 @@ organizationName            = Organization Name (eg, company)
 organizationName_default    = BLANAS.,JSC
 
 commonName                  = Common Name (e.g. server FQDN or YOUR name)
-commonName_default          = blanas.com
+commonName_default          = blanas.local
 
 emailAddress                = Email Address
-emailAddress_default        = webmaster@blanas.com
+emailAddress_default        = webmaster@blanas.local
 
 [ x509_ext ]
 
@@ -48,5 +48,5 @@ nsComment            = "OpenSSL Generated Certificate"
 
 [ alternate_names ]
 
-DNS.1       = blanas.com
-DNS.2       = *.blanas.com
+DNS.1       = blanas.local
+DNS.2       = *.blanas.local

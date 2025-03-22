@@ -33,16 +33,16 @@ if systemctl --all --type service | grep -q "$serviceName"; then
 fi
 
 user="blanas"
-if [ ! -d "/home/${user}/blanas.com/private" ]; then
-  echo "/home/${user}/blanas.com/private not exists!"
+if [ ! -d "/home/${user}/blanas.local/private" ]; then
+  echo "/home/${user}/blanas.local/private not exists!"
   exit
 fi
 
-mkdir -p "/home/${user}/blanas.com/private/blanas_signaling_server"
-pathService="/home/"${user}"/blanas.com/private/blanas_signaling_server/blanas_signaling_server"
+mkdir -p "/home/${user}/blanas.local/private/blanas_signaling_server"
+pathService="/home/"${user}"/blanas.local/private/blanas_signaling_server/blanas_signaling_server"
 cp "$DIR_PATH/blanas_signaling_server" "$pathService"
-chmod 700 -R /home/"${user}"/blanas.com/private/blanas_signaling_server
-chown -R "${user}":"${user}" /home/"${user}/blanas.com/private/blanas_signaling_server"
+chmod 700 -R /home/"${user}"/blanas.local/private/blanas_signaling_server
+chown -R "${user}":"${user}" /home/"${user}/blanas.local/private/blanas_signaling_server"
 chmod +x $pathService
 
 cat >"/etc/systemd/system/$serviceName" <<END
@@ -54,7 +54,7 @@ After=network.target
 User=${user}
 Group=${user}
 
-WorkingDirectory=/home/${user}/blanas.com/private/blanas_signaling_server
+WorkingDirectory=/home/${user}/blanas.local/private/blanas_signaling_server
 ExecStart=${pathService}
 Restart=always
 Environment=GO_ENV=production

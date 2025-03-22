@@ -30,12 +30,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN openssl req -newkey rsa:2048 -nodes -keyout /etc/ssl/private/ssl-cert-snakeoil.key -x509 -days 3650 -out /etc/ssl/certs/ssl-cert-snakeoil.pem -subj "/C=VN/ST=HaNoi/L=HaNoi/O=BlaNAS JSC/OU=DauThau/CN=CA/emailAddress=writeblabla@gmail.com"
 RUN a2ensite default-ssl
 
-# Đổi port mặc định 80 => 8080
-# Đổi port mặc định 443 => 8443
-#RUN sed -i -e "s/80/8080/g" "/etc/apache2/ports.conf"
-#RUN sed -i -e "s/443/8443/g" "/etc/apache2/ports.conf"
-#RUN sed -i -e "s/:\s*80/:8080/g" "/etc/apache2/sites-enabled/000-default.conf"
-#RUN sed -i -e "s/:\s*443/:8443/g" "/etc/apache2/sites-enabled/default-ssl.conf"
+# Đổi port mặc định 80 => 5080
+# Đổi port mặc định 443 => 5443
+#RUN sed -i -e "s/80/5080/g" "/etc/apache2/ports.conf"
+#RUN sed -i -e "s/443/5443/g" "/etc/apache2/ports.conf"
+#RUN sed -i -e "s/:\s*80/:5080/g" "/etc/apache2/sites-enabled/000-default.conf"
+#RUN sed -i -e "s/:\s*443/:5443/g" "/etc/apache2/sites-enabled/default-ssl.conf"
 
 # Set a volume mount point for your code
 VOLUME /var/www/html
