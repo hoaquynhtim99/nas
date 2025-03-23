@@ -40,7 +40,8 @@ if (defined('NV_IS_USER')) {
     }
 
     // Thiết lập của user
-    $sql = "SELECT * FROM " . NV_PREFIXLANG . "_" . $module_data . "_users_config WHERE userid=" . $user_info['userid'];
+    $sql = "SELECT * FROM " . NV_PREFIXLANG . "_" . $module_data . "_users_config WHERE
+    userid=" . $user_info['userid'] . " OR userid=0 ORDER BY userid ASC";
     $result = $db->query($sql);
     while ($row = $result->fetch()) {
         $config_user[$row['config_name']] = $row['config_value'];

@@ -390,7 +390,7 @@ if ($nv_Request->isset_request('upload_file', 'post')) {
         ]);
     }
     // Kiểm tra dữ liệu chunks
-    if ($request['chunk'] > $request['chunks'] - 1) {
+    if ($request['chunks'] > 0 and $request['chunk'] > $request['chunks'] - 1) {
         unlink($_FILES['fileupload']['tmp_name']);
         http_response_code(400);
         nv_jsonOutput([
@@ -833,8 +833,11 @@ if ($nv_Request->isset_request('change_view_type', 'post')) {
         ]);
     }
 
-    $sql = "UPDATE " . NV_PREFIXLANG . "_" . $module_data . "_users_config SET config_value=" . $db->quote($view_type) . "
-    WHERE config_name='view_type' AND userid=" . $user_info['userid'];
+    $sql = "INSERT INTO " . NV_PREFIXLANG . "_" . $module_data . "_users_config (
+        userid, config_name, config_value
+    ) VALUES (
+        " . $user_info['userid'] . ", 'view_type', " . $db->quote($view_type) . "
+    ) ON DUPLICATE KEY UPDATE config_value=" . $db->quote($view_type);
     $db->query($sql);
 
     nv_jsonOutput([
