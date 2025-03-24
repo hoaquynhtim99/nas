@@ -101,3 +101,4 @@
 !/src/data/cache/index.html
 !/src/data/tmp/index.html
 /_docker/mysql
+/src/data/config/config_global.php

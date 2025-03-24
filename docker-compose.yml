@@ -70,3 +70,17 @@ services:
       TZ: ${TimeZone}
     depends_on:
       - db
+
+  coturn:
+    container_name: coturn
+    image: coturn/coturn
+    networks:
+      blanas:
+        ipv4_address: 172.19.1.5
+    volumes:
+      - ./conf/coturn.conf:/etc/coturn/turnserver.conf
+      - ./conf/cert.pem:/etc/coturn/cert.pem
+      - ./conf/pkey.pem:/etc/coturn/pkey.pem
+    environment:
+      - TURN_REALM=${TurnServer}
+      - TURN_SERVER_NAME=${TurnServer}
