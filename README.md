@@ -40,12 +40,22 @@ Cách này khuyến nghị nếu bạn sử dụng để trải nghiệm hoặc 
 
 ### Tự cài đặt từng phần
 
-Xem các yêu cầu về môi trường cho NukeViet mục **Requirements** [ở đây](https://github.com/nukeviet/nukeviet/tree/nukeviet5.0?tab=readme-ov-file#for-users)   
+Cách này phù hợp khi bạn bắt đầu một ứng dụng công khai cho riêng mình. Hướng dẫn này viết cho máy chủ Ubuntu, nếu bạn sử dụng các máy chủ khác Debian bạn cần tự sửa một số lệnh để nó tương thích. Ví dụ apt-get bằng yum, dnf... Nếu bạn chạy máy chủ windows thì cần một số kiến thức nhất định để chuyển các hướng dẫn tại đây sang windows.
+
+Các bước thực hiện:
+
+**Chuẩn bị máy chủ:**
+
+Cài đặt một máy chủ có thể chạy được NukeViet phiên bản 5.0. Xem các yêu cầu về môi trường cho NukeViet mục **Requirements** [ở đây](https://github.com/nukeviet/nukeviet/tree/nukeviet5.0?tab=readme-ov-file#for-users)
+
 Ngoài ra BlaNAS yêu cầu cần có:
 - MariaDB 10.0.5+ hoặc MySQL 8.0+
-- Máy chủ cài ffmpeg, libavcodec-extra, nginx
+- Máy chủ cài ffmpeg, libavcodec-extra, nginx. Nếu bạn là người quản trị máy chủ thì không có gì khó để cài ffmpeg, libavcodec-extra, nginx
+- Quyền root của máy chủ.
 
-**Thực hiện:**  
+Sau khi bạn cài được và đảm bảo mã nguồn NukeViet có thể chạy được trên miền của bạn hãy làm tiếp các bước bên dưới.
+
+
 
 ## Giấy phép
 Dự án được phát hành theo giấy phép **GPL-2.0+**.
