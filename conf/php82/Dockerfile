@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && sed -i -e "s/upload_max_filesize\s*=\s*2M/upload_max_filesize = 250M/g" "$PHP_INI_DIR/php.ini" \
     && sed -i -e "s/post_max_size\s*=\s*8M/post_max_size = 250M/g" "$PHP_INI_DIR/php.ini"
 
-RUN openssl req -newkey rsa:2048 -nodes -keyout /etc/ssl/private/ssl-cert-snakeoil.key -x509 -days 3650 -out /etc/ssl/certs/ssl-cert-snakeoil.pem -subj "/C=VN/ST=HaNoi/L=HaNoi/O=BlaNAS JSC/OU=DauThau/CN=CA/emailAddress=writeblabla@gmail.com"
+RUN openssl req -newkey rsa:2048 -nodes -keyout /etc/ssl/private/ssl-cert-snakeoil.key -x509 -days 3650 -out /etc/ssl/certs/ssl-cert-snakeoil.pem -subj "/C=VN/ST=HaNoi/L=HaNoi/O=BlaNAS JSC/OU=BlaNAS/CN=CA/emailAddress=webmaster@blanas.local"
 RUN a2ensite default-ssl
 
 # Đổi port mặc định 80 => 5080
