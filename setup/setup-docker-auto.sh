@@ -82,6 +82,11 @@ if [ ! -f "$DIR_PATH/config.php" ]; then
   cp "$DIR_PATH/setup/config.php" "$DIR_PATH/src/config.php"
   sleep 1
 fi
+if [ ! -f "$DIR_PATH/.env" ]; then
+  echo "Tạo file .env"
+  cp "$DIR_PATH/.env.example" "$DIR_PATH/.env"
+  sleep 1
+fi
 
 docker-compose up -d
 
