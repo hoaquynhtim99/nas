@@ -4,7 +4,7 @@
 [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue?style=for-the-badge)](https://paypal.me/tandung?country.x=VN&locale.x=vi_VN)
 
 ## Giới thiệu
-BlaNAS là hệ thống quản lý chia sẻ, xem trước, đồng bộ tệp tin; hỗ trợ gửi và nhận tệp tin trực tiếp.
+BlaNAS là hệ thống quản lý chia sẻ, xem trước, đồng bộ tệp tin; hỗ trợ gửi và nhận tệp tin trực tiếp. Dự án vẫn đang phát triển phục vụ nhu cầu của tác giả và chia sẻ rộng rãi. Bạn có thể sử dụng ngay hoặc nghiên cứu học hỏi, phát triển sản phẩm riêng của mình dựa trên những gì nó hiện có.
 
 ## Tính năng
 
