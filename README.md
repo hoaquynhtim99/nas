@@ -1,5 +1,8 @@
 # BlaNAS
 
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/hoaquynhtim99?style=for-the-badge)](https://github.com/sponsors/hoaquynhtim99)
+[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue?style=for-the-badge)](https://paypal.me/tandung?country.x=VN&locale.x=vi_VN)
+
 ## Giới thiệu
 BlaNAS là hệ thống quản lý chia sẻ, xem trước, đồng bộ tệp tin; hỗ trợ gửi và nhận tệp tin trực tiếp.
 
@@ -34,6 +37,7 @@ Dự án được phát hành theo giấy phép **GPL-2.0+**.
 ## Ủng hộ
 Nếu bạn thấy dự án hữu ích, hãy ủng hộ chúng tôi:
 
-[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/tandung?country.x=VN&locale.x=vi_VN)  
+- [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/tandung?country.x=VN&locale.x=vi_VN)  
+- [![GitHub Sponsors](https://img.shields.io/github/sponsors/hoaquynhtim99)](https://github.com/sponsors/hoaquynhtim99)
 
 Cảm ơn bạn đã ủng hộ và sử dụng BlaNAS!

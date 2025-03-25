@@ -14,7 +14,7 @@ services:
     volumes:
       - ./conf/my.cnf:/etc/mysql/conf.d/blanas.cnf
       - ./_docker/mysql:/var/lib/mysql
-      - ./wiki:/home
+      - ./setup:/home
     environment:
       MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 1
       TZ: ${TimeZone}
@@ -84,3 +84,19 @@ services:
     environment:
       - TURN_REALM=${TurnServer}
       - TURN_SERVER_NAME=${TurnServer}
+
+  signaling:
+    container_name: signaling
+    networks:
+      blanas:
+        ipv4_address: 172.19.1.6
+    build:
+      context: .
+      dockerfile: conf/ws/Dockerfile
+    #restart: unless-stopped
+    ports:
+      - 3001:3001
+    #volumes:
+    #  - ./web_socket/src:/app
+    environment:
+      - CGO_ENABLED=1
