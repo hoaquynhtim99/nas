@@ -136,4 +136,5 @@ Nếu bạn thấy dự án hữu ích, hãy ủng hộ chúng tôi:
 - [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/tandung?country.x=VN&locale.x=vi_VN)  
 - [![GitHub Sponsors](https://img.shields.io/github/sponsors/hoaquynhtim99)](https://github.com/sponsors/hoaquynhtim99)
 
-Cảm ơn bạn đã ủng hộ và sử dụng BlaNAS!
+Xin cảm ơn các nhà tài trợ đã đóng góp phát triển dự án:
+- [An Hồ (Van An)](https://www.facebook.com/anhv.87)
